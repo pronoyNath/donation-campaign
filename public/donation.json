@@ -1,0 +1,134 @@
+[
+    {
+        "id": 1,
+        "picture": "donation1.jpg",
+        "title": "Medical Supplies Donation",
+        "category": "Health",
+        "category_bg": "bg-red-500",
+        "card_bg": "bg-gray-200",
+        "text_button_bg": "bg-red-500 text-white",
+        "description": "Donate medical supplies to support healthcare workers and those in need.",
+        "price": 150
+    },
+    {
+        "id": 2,
+        "picture": "donation2.jpg",
+        "title": "Education Scholarships",
+        "category": "Education",
+        "category_bg": "bg-blue-500",
+        "card_bg": "bg-blue-100",
+        "text_button_bg": "bg-blue-500 text-white",
+        "description": "Provide scholarships to underprivileged students for their education.",
+        "price": 200
+    },
+    {
+        "id": 3,
+        "picture": "donation3.jpg",
+        "title": "Clothing Drive",
+        "category": "Clothing",
+        "category_bg": "bg-green-500",
+        "card_bg": "bg-green-100",
+        "text_button_bg": "bg-green-500 text-white",
+        "description": "Donate clothes to help those in need stay warm and comfortable.",
+        "price": 120
+    },
+    {
+        "id": 4,
+        "picture": "donation4.jpg",
+        "title": "Food Bank Contribution",
+        "category": "Food",
+        "category_bg": "bg-orange-500",
+        "card_bg": "bg-orange-100",
+        "text_button_bg": "bg-orange-500 text-white",
+        "description": "Contribute to a local food bank to help fight hunger in your community.",
+        "price": 110
+    },
+    {
+        "id": 5,
+        "picture": "donation5.jpg",
+        "title": "Children's Health Support",
+        "category": "npm,
+        "category_bg": "bg-red-500",
+        "card_bg": "bg-gray-200",
+        "text_button_bg": "bg-red-500 text-white",
+        "description": "Support healthcare initiatives for children's health and well-being.",
+        "price": 150
+    },
+    {
+        "id": 6,
+        "picture": "donation6.jpg",
+        "title": "Scholarships for STEM Education",
+        "category": "Education",
+        "category_bg": "bg-blue-500",
+        "card_bg": "bg-blue-100",
+        "text_button_bg": "bg-blue-500 text-white",
+        "description": "Provide scholarships for students pursuing STEM education.",
+        "price": 200
+    },
+    {
+        "id": 7,
+        "picture": "donation7.jpg",
+        "title": "Warm Winter Clothing Drive",
+        "category": "Clothing",
+        "category_bg": "bg-green-500",
+        "card_bg": "bg-green-100",
+        "text_button_bg": "bg-green-500 text-white",
+        "description": "Collect warm clothing for those in need during the winter season.",
+        "price": 120
+    },
+    {
+        "id": 8,
+        "picture": "donation8.jpg",
+        "title": "Community Food Assistance",
+        "category": "Food",
+        "category_bg": "bg-orange-500",
+        "card_bg": "bg-orange-100",
+        "text_button_bg": "bg-orange-500 text-white",
+        "description": "Help provide food assistance to families in your community.",
+        "price": 110
+    },
+    {
+        "id": 9,
+        "picture": "donation9.jpg",
+        "title": "Elderly Healthcare Support",
+        "category": "Health",
+        "category_bg": "bg-red-500",
+        "card_bg": "bg-gray-200",
+        "text_button_bg": "bg-red-500 text-white",
+        "description": "Support healthcare services for elderly individuals in need.",
+        "price": 150
+    },
+    {
+        "id": 10,
+        "picture": "donation10.jpg",
+        "title": "Literacy Programs",
+        "category": "Education",
+        "category_bg": "bg-blue-500",
+        "card_bg": "bg-blue-100",
+        "text_button_bg": "bg-blue-500 text-white",
+        "description": "Fund literacy programs to improve education access for all.",
+        "price": 200
+    },
+    {
+        "id": 11,
+        "picture": "donation11.jpg",
+        "title": "Homeless Shelter Support",
+        "category": "Clothing",
+        "category_bg": "bg-green-500",
+        "card_bg": "bg-green-100",
+        "text_button_bg": "bg-green-500 text-white",
+        "description": "Donate clothing and essentials to support homeless shelters.",
+        "price": 120
+    },
+    {
+        "id": 12,
+        "picture": "donation12.jpg",
+        "title": "Emergency Food Relief",
+        "category": "Food",
+        "category_bg": "bg-orange-500",
+        "card_bg": "bg-orange-100",
+        "text_button_bg": "bg-orange-500 text-white",
+        "description": "Contribute to emergency food relief efforts for disaster-affected areas.",
+        "price": 110
+    }
+]
