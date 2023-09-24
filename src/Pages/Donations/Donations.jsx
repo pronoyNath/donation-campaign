@@ -1,7 +1,7 @@
 const Donations = () => {
     return (
         <div>
-            donation
+            donations...
         </div>
     );
 };
