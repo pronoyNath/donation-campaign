@@ -1,15 +1,47 @@
 const DonationDetailCard = ({ donation }) => {
-    const {id, picture, title, category,category_bg,card_bg,text_button_bg,text_color,description,price} = donation;
+    const { id, picture, title, category, category_bg, card_bg, text_button_bg, text_color, description, price } = donation;
+
+    const handleDonations = () => {
+        // console.log(phone);
+        const addDonationList = [];
+        const donationItems = JSON.parse(localStorage.getItem('donationList'));
+
+        if (!donationItems) {
+            addDonationList.push(donation);
+            localStorage.setItem('donationList', JSON.stringify(addDonationList));
+            swal("Thank You!", "You Donated Successfully!", "success")
+        }
+        else {
+            const isExists = donationItems.find(donation => donation.id === id)
+            if (!isExists) {
+                addDonationList.push(...donationItems, donation);
+                localStorage.setItem('donationList', JSON.stringify(addDonationList))
+                swal("Thank You!", "You Donated Successfully!", "success")
+            }
+            else {
+                swal("Already Donated!", "Please donte on other categories!")
+            }
+
+        }
+       
+    }
+
     return (
         <div>
-            <div className="relative flex h-[100vh] w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700">
-                <div className="relative m-0 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none relative">
-                    <img className="w-full h-[60vh]"
+            <div className="relative flex h-[600px] w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700">
+                <div className="relative m-0 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none">
+                    <img
+                        className="w-full h-[100%] object-fill"
                         src={picture}
                         alt="ui/ux review check"
                     />
                     <div className="w-full h-[80px] absolute bottom-0 bg-black bg-opacity-60">
-                        <button className={`font-bold text-lg p-2 rounded ${text_button_bg}  ml-10 mt-4`}>Donate ${price}</button>
+                        <button onClick={handleDonations}
+                            style={{
+                                backgroundColor: text_button_bg,
+                                color: "white"
+                            }}
+                            className={`font-bold text-lg p-2 rounded ${text_button_bg}  ml-10 mt-4`}>Donate ${price}</button>
                     </div>
                 </div>
                 <div className="p-6">

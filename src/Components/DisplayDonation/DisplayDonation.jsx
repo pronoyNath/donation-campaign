@@ -6,18 +6,31 @@ const DisplayDonation = ({ donation }) => {
     return (
         <div className=''>
             <Link to={`/donation/${id}`}>
-            <div className={`relative flex max-w-[24rem] flex-col rounded-xl  bg-clip-border text-gray-700 shadow-2xl ${card_bg}`}>
-                <div className="relative m-0 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none">
-                    <img
+            <div 
+            style={{
+                backgroundColor: card_bg,
+            }}
+            className={`relative flex max-w-[24rem] flex-col rounded-xl  bg-clip-border text-gray-700 shadow-2xl h-72`}>
+                <div className="relative m-0 overflow-hidden rounded-t-xl bg-transparent bg-clip-border text-gray-700 shadow-none ">
+                    <img 
                         src={picture}
                         alt=""
                     />
                 </div>
                 <div className="p-6 ">
-                    <button className={`block font-sans text-xs font-bold leading-snug tracking-normal text-blue-gray-900 antialiased  p-2 rounded-md ${category_bg} ${text_color}`}>
+                    <button
+                    style={{
+                        backgroundColor: category_bg,
+                        color: text_color
+                    }}
+                     className={`block font-sans text-xs font-bold leading-snug tracking-normal text-blue-gray-900 antialiased  p-2 rounded-md`}>
                         {category}
                     </button>
-                    <p className={`mt-3 block font-sans text-sm font-bold leading-relaxed text-gray-700 antialiased ${text_color}`}>
+                    <p 
+                    style={{
+                        color : text_color
+                    }}
+                    className={`mt-3 block font-sans text-sm font-bold leading-relaxed text-gray-700 antialiased`}>
                         {title}
                     </p>
                 </div>
