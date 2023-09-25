@@ -1,20 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Pie } from 'react-chartjs-2';
 
-const Statistics = ({ chartData }) => {
-  const [chartKey, setChartKey] = useState(0);
+export default function Statistics() {
+  const data = {
+    labels: ['series A', 'series B', 'series C'],
+    datasets: [
+      {
+        data: [10, 15, 20],
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'], // You can customize the colors here
+      },
+    ],
+  };
 
-  useEffect(() => {
-    // Increment the key to trigger chart re-rendering
-    setChartKey((prevKey) => prevKey + 1);
-  }, [chartData]);
+  const options = {
+    // You can customize chart options here
+    responsive: true,
+  };
 
   return (
-    <div>
-      <h2>Pie Chart</h2>
-      <Pie key={chartKey} data={chartData} />
+    <div style={{ width: '1000px', height: '400px', margin: '0px auto' }}>
+      <Pie data={data} options={options} />
     </div>
   );
-};
-
-export default Statistics;
+}

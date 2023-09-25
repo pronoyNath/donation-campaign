@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import DonatedList from "../../Components/DonatedList/DonatedList";
 
+
 const Donations = () => {
     const [donations, setDonations] = useState([]);
     const [notFound, setNotFound] = useState("");
     const [isShow, setIsShow] = useState(false);
     const [totalPrice, setTotalPrice] = useState(0);
-   
-    console.log(isShow);
 
     useEffect(() => {
         const donationsItems = JSON.parse(localStorage.getItem('donationList'));
