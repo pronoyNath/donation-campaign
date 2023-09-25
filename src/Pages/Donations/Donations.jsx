@@ -6,16 +6,12 @@ const Donations = () => {
     const [donations, setDonations] = useState([]);
     const [notFound, setNotFound] = useState("");
     const [isShow, setIsShow] = useState(false);
-    const [totalPrice, setTotalPrice] = useState(0);
 
     useEffect(() => {
         const donationsItems = JSON.parse(localStorage.getItem('donationList'));
         if (donationsItems) {
             setDonations(donationsItems);
             
-            const total = donationsItems.reduce((preValue, currentItem) => preValue + currentItem.price, 0)
-
-            setTotalPrice(total)
         } else {
             setNotFound("Not Donated Yet!")
         }
