@@ -10,9 +10,9 @@ const DisplayDonation = ({ donation }) => {
             style={{
                 backgroundColor: card_bg,
             }}
-            className={`relative flex max-w-[24rem] flex-col rounded-xl  bg-clip-border text-gray-700 h-72`}>
+            className={`relative flex max-w-[24rem] flex-col rounded-xl  bg-clip-border text-gray-700`}>
                 <div className="relative m-0 overflow-hidden rounded-t-xl bg-transparent bg-clip-border text-gray-700 shadow-none ">
-                    <img 
+                    <img  className="h-40 w-full"
                         src={picture}
                         alt=""
                     />
