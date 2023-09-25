@@ -1,25 +1,60 @@
-import React from 'react';
-import { Pie } from 'react-chartjs-2';
+import { PieChart, Pie, ResponsiveContainer, Cell } from 'recharts';
 
-export default function Statistics() {
-  const data = {
-    labels: ['series A', 'series B', 'series C'],
-    datasets: [
-      {
-        data: [10, 15, 20],
-        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'], // You can customize the colors here
-      },
-    ],
-  };
+const data = [
+  { name: 'Group A', value: 400 },
+  { name: 'Group B', value: 300 }
+];
 
-  const options = {
-    // You can customize chart options here
-    responsive: true,
-  };
+const COLORS = ['#FF444A', '#00C49F'];
+
+const RADIAN = Math.PI / 180;
+const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }) => {
+  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+  const x = cx + radius * Math.cos(-midAngle * RADIAN);
+  const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
   return (
-    <div style={{ width: '1000px', height: '400px', margin: '0px auto' }}>
-      <Pie data={data} options={options} />
+    <text x={x} y={y} fill="white" textAnchor="middle" dominantBaseline="central">
+      {`${(percent * 100).toFixed(0)}%`}
+    </text>
+  );
+};
+
+const Statistics = () => {
+  return (
+    <div>
+      <ResponsiveContainer width="100%" height={400}>
+        <PieChart width={400} height={400}>
+          <Pie
+            data={data}
+            cx="50%"
+            cy="50%"
+            labelLine={false}
+            label={renderCustomizedLabel}
+            outerRadius={150}
+            fill="#8884d8"
+            dataKey="value"
+          >
+            {data.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+            ))}
+          </Pie>
+        </PieChart>
+      </ResponsiveContainer>
+      <div style={{ textAlign: 'center', marginTop: '10px', display:'flex', gap:'20px', justifyContent:'center' }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <span style={{ color: COLORS[0], marginRight: '20px', fontSize: '24px'  }}>Group A</span>
+          <div style={{ width: '200px', height: '20px', backgroundColor: COLORS[0], marginRight: '10px' }}></div>
+          
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <span style={{ color: COLORS[1], marginRight: '20px' , fontSize: '24px' }}>Group B</span>
+          <div style={{ width: '200px', height: '20px', backgroundColor: COLORS[1], marginRight: '10px' }}></div>
+          
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default Statistics;
