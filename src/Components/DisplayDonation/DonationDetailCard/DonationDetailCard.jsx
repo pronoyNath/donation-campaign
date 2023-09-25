@@ -19,7 +19,7 @@ const DonationDetailCard = ({ donation }) => {
                 swal("Thank You!", "You Donated Successfully!", "success")
             }
             else {
-                swal("Already Donated!", "Please donte on other categories!")
+                swal("Already Donated!", "Please try to donate other categories!")
             }
 
         }
