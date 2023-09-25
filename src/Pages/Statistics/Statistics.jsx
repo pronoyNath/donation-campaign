@@ -1,34 +1,39 @@
+import React, { useState, useEffect } from 'react';
 import { PieChart, Pie, ResponsiveContainer, Cell } from 'recharts';
 
-
-const storageData = JSON.parse(localStorage.getItem('donationList'));
-
-
-const totalDonation = 12;
-const yourDonation = storageData? storageData.length : 0;
-
-
-const data = [
-  { name: 'Your Donation', value: yourDonation },
-  { name: 'Total Donation', value: totalDonation - yourDonation }
-];
-
-const COLORS = ['#00C49F', '#FF444A'];
-
-const RADIAN = Math.PI / 180;
-const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }) => {
-  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-  return (
-    <text className='text-3xl' x={x} y={y} fill="white" textAnchor="middle" dominantBaseline="central">
-      {`${(percent * 100).toFixed(0)}%`}
-    </text>
-  );
-};
-
 const Statistics = () => {
+  // Step 1: Initialize state for yourDonation
+  const [yourDonation, setYourDonation] = useState(0);
+  const totalDonation = 12;
+
+  // Step 2: Use useEffect to update yourDonation based on local storage
+  useEffect(() => {
+    const storageData = JSON.parse(localStorage.getItem('donationList'));
+    const newYourDonation = storageData ? storageData.length : 0;
+    setYourDonation(newYourDonation);
+  }, []);
+
+  // Step 3: Render the updated data
+  const data = [
+    { name: 'Your Donation', value: yourDonation },
+    { name: 'Total Donation', value: totalDonation - yourDonation }
+  ];
+
+  const COLORS = ['#00C49F', '#FF444A'];
+
+  const RADIAN = Math.PI / 180;
+  const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }) => {
+    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+    return (
+      <text className='text-3xl' x={x} y={y} fill="white" textAnchor="middle" dominantBaseline="central">
+        {`${(percent * 100).toFixed(0)}%`}
+      </text>
+    );
+  };
+
   return (
     <div>
       <ResponsiveContainer width="100%" height={400}>
