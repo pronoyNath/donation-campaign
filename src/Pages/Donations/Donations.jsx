@@ -18,7 +18,7 @@ const Donations = () => {
     }, [])
 
     return (
-        <div>
+        <div className="pt-5 pb-10">
             {
                 notFound ? <div className="font-bold text-3xl flex mt-36 justify-center">
                     {notFound}
@@ -27,17 +27,15 @@ const Donations = () => {
                     <div className="grid grid-cols-2 gap-10">
                         {
                             isShow ? donations.map(donation => <DonatedList key={donation.id} donation={donation}></DonatedList>) :
-                                donations.slice(0, 2).map(donation => <DonatedList key={donation.id} donation={donation}></DonatedList>)
+                                donations.slice(0, 4).map(donation => <DonatedList key={donation.id} donation={donation}></DonatedList>)
                         }
 
 
                     </div>
             }
             {
-                donations.length > 2 && <button onClick={() => setIsShow(!isShow)} className="flex justify-center btn font-bold text-white py-2 px-3 mx-auto bg-green-700 m-7">
-                    {
-                        isShow ? "See less" : "See All"
-                    }
+               !isShow && donations.length > 4 && <button onClick={() => setIsShow(true)} className="flex justify-center btn font-bold text-white py-2 px-3 mx-auto bg-green-700 m-7">
+                    See All    
                 </button>
             }
             

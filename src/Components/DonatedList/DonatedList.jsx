@@ -24,7 +24,7 @@ const DonatedList = ({donation}) => {
                         backgroundColor: category_bg,
                         color: text_color
                     }}
-                    className="mb-4 block font-sans text-xs font-semibold uppercase leading-relaxed tracking-normal p-2 rounded-lg antialiased">
+                    className="mb-4 block font-sans text-sm font-semibold uppercase leading-relaxed tracking-normal p-2 rounded-lg antialiased">
                         {category}
                     </button>
                     <h4 
@@ -42,7 +42,7 @@ const DonatedList = ({donation}) => {
                     <Link to={`/donation/${id}`}>
                         <button
                          style={{
-                            backgroundColor: text_button_bg,
+                            backgroundColor: text_color,
                             color: "white"
                         }}
                             className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"

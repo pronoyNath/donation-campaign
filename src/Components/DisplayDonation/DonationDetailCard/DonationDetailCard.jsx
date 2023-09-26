@@ -38,10 +38,10 @@ const DonationDetailCard = ({ donation }) => {
                     <div className="w-full h-[80px] absolute bottom-0 bg-black bg-opacity-60">
                         <button onClick={handleDonations}
                             style={{
-                                backgroundColor: text_button_bg,
+                                backgroundColor: text_color,
                                 color: "white"
                             }}
-                            className={`font-bold text-lg p-2 rounded ${text_button_bg}  ml-10 mt-4`}>Donate ${price}</button>
+                            className={`font-bold text-lg p-2 rounded   ml-10 mt-4`}>Donate ${price}</button>
                     </div>
                 </div>
                 <div className="p-6">
