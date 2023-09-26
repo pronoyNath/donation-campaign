@@ -2,18 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { PieChart, Pie, ResponsiveContainer, Cell } from 'recharts';
 
 const Statistics = () => {
-  // Step 1: Initialize state for yourDonation
+ 
   const [yourDonation, setYourDonation] = useState(0);
   const totalDonation = 12;
 
-  // Step 2: Use useEffect to update yourDonation based on local storage
+
   useEffect(() => {
     const storageData = JSON.parse(localStorage.getItem('donationList'));
     const newYourDonation = storageData ? storageData.length : 0;
     setYourDonation(newYourDonation);
   }, []);
 
-  // Step 3: Render the updated data
+
   const data = [
     { name: 'Your Donation', value: yourDonation },
     { name: 'Total Donation', value: totalDonation - yourDonation }
