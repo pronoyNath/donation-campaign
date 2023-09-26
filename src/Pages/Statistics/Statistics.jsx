@@ -13,7 +13,7 @@ const Statistics = () => {
     setYourDonation(newYourDonation);
   }, []);
 
-
+  
   const data = [
     { name: 'Your Donation', value: yourDonation },
     { name: 'Total Donation', value: totalDonation - yourDonation }
@@ -29,7 +29,7 @@ const Statistics = () => {
 
     return (
       <text className='text-3xl' x={x} y={y} fill="white" textAnchor="middle" dominantBaseline="central">
-        {`${(percent * 100).toFixed(0)}%`}
+        {`${(percent * 100).toFixed(1)}%`}
       </text>
     );
   };
