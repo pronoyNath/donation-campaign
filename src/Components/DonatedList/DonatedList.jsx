@@ -24,19 +24,19 @@ const DonatedList = ({donation}) => {
                         backgroundColor: category_bg,
                         color: text_color
                     }}
-                    className="mb-4 block font-sans text-sm font-semibold uppercase leading-relaxed tracking-normal p-2 rounded-lg antialiased">
+                    className="mb-4 block font-sans text-xs md:text-sm font-semibold uppercase leading-relaxed tracking-normal p-2 rounded-lg antialiased">
                         {category}
                     </button>
                     <h4 
                     
-                    className="mb-2 block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                    className="mb-2 block font-sans text-base md:text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                        {title}
                     </h4>
                     <p
                     style={{
                         color : text_color
                     }}
-                    className="mb-8 block font-sans text-lg font-bold leading-relaxed antialiased">
+                    className="mb-8 block font-sans text-base md:text-lg font-bold leading-relaxed antialiased">
                         ${price}
                     </p>
                     <Link to={`/donation/${id}`}>
@@ -45,7 +45,7 @@ const DonatedList = ({donation}) => {
                             backgroundColor: text_color,
                             color: "white"
                         }}
-                            className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                            className="flex select-none items-center gap-2 rounded-lg py-3 md:py-4 px-3 md:px-6 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                             type="button"
                         >
                             view details

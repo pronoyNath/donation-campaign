@@ -24,7 +24,7 @@ const Donations = () => {
                     {notFound}
                 </div> :
 
-                    <div className="grid grid-cols-2 gap-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                         {
                             isShow ? donations.map(donation => <DonatedList key={donation.id} donation={donation}></DonatedList>) :
                                 donations.slice(0, 4).map(donation => <DonatedList key={donation.id} donation={donation}></DonatedList>)
