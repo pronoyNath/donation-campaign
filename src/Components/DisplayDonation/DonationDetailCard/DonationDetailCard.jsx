@@ -28,10 +28,10 @@ const DonationDetailCard = ({ donation }) => {
 
     return (
         <div>
-            <div className="relative flex h-[600px] w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700">
+            <div className="relative flex  w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700">
                 <div className="relative m-0 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none">
                     <img
-                        className="w-full h-[100%] object-fill"
+                        className="w-full h-96 object-fill"
                         src={picture}
                         alt="ui/ux review check"
                     />
