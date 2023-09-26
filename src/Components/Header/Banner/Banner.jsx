@@ -13,7 +13,7 @@ const Banner = ({handleSearch}) => {
                 <div className="hero-overlay bg-white bg-opacity-90"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="">
-                        <h1 className="mb-12 text-3xl text-black font-bold">I Grow By Helping People In Need</h1>
+                        <h1 className="mb-12 text-lg md:text-3xl text-black font-bold">I Grow By Helping People In Need</h1>
                         <div className="relative w-3/4 mx-auto">
 
                             <input type="text" placeholder="Search here...." className="input input-bordered w-full text-black" 
