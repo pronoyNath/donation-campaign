@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Statistics.css'
 import { PieChart, Pie, ResponsiveContainer, Cell } from 'recharts';
 
 const Statistics = () => {
@@ -54,12 +55,12 @@ const Statistics = () => {
           </Pie>
         </PieChart>
       </ResponsiveContainer>
-      <div style={{ textAlign: 'center', marginTop: '10px', display: 'flex', gap: '80px', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+      <div className='labels py-5' style={{ textAlign: 'center', marginTop: '10px', display: 'flex', gap: '80px', justifyContent: 'center' }}>
+        <div className='labels' style={{ display: 'flex', alignItems: 'center' }}>
           <span style={{ marginRight: '20px', fontSize: '24px' }}>Your Donation</span>
           <div style={{ width: '200px', height: '20px', backgroundColor: COLORS[0], marginRight: '10px' }}></div>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div className='labels' style={{ display: 'flex', alignItems: 'center' }}>
           <span style={{ marginRight: '20px', fontSize: '24px' }}>Total Donation</span>
           <div style={{ width: '200px', height: '20px', backgroundColor: COLORS[1], marginRight: '10px' }}></div>
         </div>
